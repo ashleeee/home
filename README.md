@@ -1,2 +1,2 @@
 # home repository.
-# this repository is for my homepage.
+this repository is for my homepage.
