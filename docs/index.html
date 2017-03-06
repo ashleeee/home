@@ -10,22 +10,20 @@ window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
 var recognition = new webkitSpeechRecognition();
 recognition.lang = 'ja';
 
-recognition.addEventListener('result', function(event){
+recognition.addEventListener('result', function(event) {
     var text = event.results.item(0).item(0).transcript;
     $("#result_text").val(text);
 }, false);
 
-function record()
-{
+function record() {
     recognition.start();
 }
 </script>
+
 </head>
 
 <body>
-
-<textarea id="result_text" cols="100" rows="10">
-</textarea>
+  <textarea id="result_text" cols="100" rows="10"></textarea>
 <br />
 <input type="button" onClick="record()" value="start" />
 </body>
